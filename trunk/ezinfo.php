@@ -21,7 +21,7 @@ class novenutilsInfo
 {
 	static function info()
     {
-        return array( 'Name'      => 'Noven Utils',
+        return array( 'Name'      => '<a href="http://projects.ez.no/novenutils" target="_blank">Noven Utils</a>',
                       'Version'   => '@@@VERSION@@@',
                       'Copyright' => 'Copyright © 2008 - '.date('Y').' Noven.',
                       'Author'   => 'Jérôme Vieilledent'
