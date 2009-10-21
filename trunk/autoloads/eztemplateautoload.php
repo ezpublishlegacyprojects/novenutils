@@ -27,7 +27,8 @@ $eZTemplateOperatorArray[] =
          'class' => 'NovenStringUtilities',
          'operator_names' => array( 'escape_as_entities', 
          							'shorten_to_last_word', 
-         							'split_words_in_parts' ));
+         							'split_words_in_parts',
+  									'str_replace' ));
 
 // Various utilities
 $eZTemplateOperatorArray[] =

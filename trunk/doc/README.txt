@@ -9,6 +9,7 @@ This extension adds several template operators to the system :
   * espace_as_entities() => Does an "htmlentities" on the given string, taking the charset used into account.
   * split_words_in_parts($maxLength) => Splits too long words and adds one or more caesura character(s).
   * shorten_to_last_word($maxLength) => Cuts a string to $length characters and then cuts at the end of the last word. Also adds "..." to the cutted string
+  * str_replace($search, $replace, $subject) => Simple str_replace (identical to PHP str_replace function)
 
 - Misc operators :
   * persistent_variable_append($key, $value, $mergeExisting=false) => Adds a value to the "persistent_variable" variable, available in node templates and in pagelayout when a node is displayed. 

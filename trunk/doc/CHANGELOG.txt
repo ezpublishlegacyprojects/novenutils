@@ -1,6 +1,11 @@
 Noven Utils
 2009 Jerome Vieilledent - Noven
 
+1.0.1
+------------------
+* Fix bug with string operators declarations
+* Added str_replace operator
+
 1.0
 ------------------
 Initial public release

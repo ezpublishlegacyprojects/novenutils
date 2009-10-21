@@ -35,7 +35,8 @@ class NovenStringUtilities
     }
 
     /*!
-     	Return an array with the template operator name.
+     
+	Return an array with the template operator name.
     */
     public function operatorList()
     {
@@ -62,8 +63,18 @@ class NovenStringUtilities
                                             ),
                       'split_words_in_parts' => array('length' => array( 'type' => 'integer',
                                                                     	'required' => true,
-                                                                     	'default' => 0 ),
-                      'escape_as_entities'	=> array()
+                                                                     	'default' => 0 )
+                                            ),
+                      'escape_as_entities'	=> array(),
+                      'str_replace' => array('search' => array( 'type' => 'string',
+                                                                  'required' => true,
+                                                                  'default' => '' ),
+                                               'replace' => array( 'type' => 'string',
+                                                                   'required' => true,
+                                                                   'default' => '' ),
+                                               'subject' => array( 'type' => 'string',
+                                                                   'required' => true,
+                                                                   'default' => '' )
                                             ) );
     }
     
@@ -85,6 +96,10 @@ class NovenStringUtilities
             	
             case 'split_words_in_parts':
             	$operatorValue = $this->splitWordsInParts($operatorValue, $namedParameters['length']);
+            	break;
+            	
+            case 'str_replace':
+            	$operatorValue = $this->strReplace($namedParameters['search'], $namedParameters['replace'], $namedParameters['subject']);
             	break;
         }
     }
@@ -204,6 +219,18 @@ class NovenStringUtilities
     		$string = utf8_encode($string);
     		
     	return $string;
+    }
+    
+    /**
+     * Simple str_replace
+     * @param string $search
+     * @param string $replace
+     * @param string $subject
+     * @return string
+     */
+    private function strReplace($search, $replace, $subject)
+    {
+    	return str_replace($search, $replace, $subject);
     }
 }
 
