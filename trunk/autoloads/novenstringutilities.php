@@ -40,7 +40,7 @@ class NovenStringUtilities
     */
     public function operatorList()
     {
-        return array( 'escape_as_entities', 'shorten_to_last_word', 'split_words_in_parts' );
+        return array( 'escape_as_entities', 'shorten_to_last_word', 'split_words_in_parts', 'str_replace' );
     }
     /*!
      \return true to tell the template engine that the parameter list exists per operator type,
